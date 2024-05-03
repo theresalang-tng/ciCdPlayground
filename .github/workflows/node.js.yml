@@ -18,28 +18,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: setup
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20.x
-        cache: 'npm'
 
-    - name: Run install
-      uses: borales/actions-yarn@v4
-      with:
-        cmd: install # will run `yarn install` command
+    - name: install
+      run: yarn
 
-    - name: build
-      uses: borales/actions-yarn@v4
-      with:
-        cmd: build
+    - name: Unit tests
+      run: yarn test
 
-    - name: test
-      uses: borales/actions-yarn@v4
-      with:
-        cmd: test
+    - name: Build
+      run: yarn build
 
-    - name: e2e test
-      uses: borales/actions-yarn@v4
-      with:
-        cmd: yarn test:e2e
+    - name: Integration tests
+      run: yarn test:e2e
