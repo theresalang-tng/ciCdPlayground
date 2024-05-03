@@ -17,12 +17,13 @@ new App({
 		tools: 'Jenkins',
 		// What do you want to learn in this workshop? 
 		expectations: [
-			'see and understand a complete CI/CD pipeline'
+			'See and understand a complete CI/CD pipeline',
+			'Get to know basic Jenkins features'
 		],
 		// What do you like to do when you're not coding?
 		hobbies: [
 			'sewing',
-			'running''
+			'running'
 		]
 	}
 });
